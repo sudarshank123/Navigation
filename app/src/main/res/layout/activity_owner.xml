@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".OwnerActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/shape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape"
+        android:contentDescription="TODO" />
+    <soup.neumorphism.NeumorphTextView
+        app:neumorph_shapeType="flat"
+        android:id="@+id/ownerDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shape"
+        android:text="Owner Details !"
+        android:textColor="@color/LightGrey"
+        android:textSize="22sp"
+        android:layout_marginTop="-110dp"
+        android:fontFamily="@font/abril_fatface"
+        android:layout_centerHorizontal="true"/>
+    <ViewFlipper
+        android:id="@+id/flipper"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"
+        android:alpha="0.7"
+        android:layout_below="@id/ownerDetails"
+        android:layout_marginTop="-10dp"
+        android:layout_centerHorizontal="true"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flipper"
+        android:layout_marginTop="2dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/neu_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:neumorph_shapeType="pressed"
+            style="@style/Widget.Neumorph.CardView"
+            app:neumorph_backgroundColor="@color/background"
+            app:neumorph_shadowColorDark="@color/dark_shadow"
+            app:neumorph_shadowColorLight="@color/light_shadow"
+            app:neumorph_shadowElevation="@dimen/_5sdp"
+            app:neumorph_shapeAppearance="@style/NeumorphismCard">
+            <EditText
+                android:id="@+id/editText_login_Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:drawableStart="@drawable/ic_baseline_email_24"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableTint="@color/LightGrey"
+                android:background="@drawable/no_background"
+                android:textCursorDrawable="@drawable/cursor"
+                android:autofillHints=""
+                android:hint="Email"
+                android:textSize="20sp"
+                android:textColorHint="#546E7A"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/_12sdp" />
+        </soup.neumorphism.NeumorphCardView>
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/neu_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/neu_email"
+            app:neumorph_shapeType="pressed"
+            style="@style/Widget.Neumorph.CardView"
+            app:neumorph_backgroundColor="@color/background"
+            app:neumorph_shadowColorDark="@color/dark_shadow"
+            app:neumorph_shadowColorLight="@color/light_shadow"
+            app:neumorph_shadowElevation="@dimen/_5sdp"
+            app:neumorph_shapeAppearance="@style/NeumorphismCard">
+
+            <EditText
+                android:id="@+id/editText_login_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_22sdp"
+                android:background="@drawable/no_background"
+                android:drawableEnd="@drawable/ic_baseline_visibility_off_24"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableTint="@color/LightGrey"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:longClickable="false"
+                android:padding="@dimen/_12sdp"
+                android:textColorHint="#546E7A"
+                android:autofillHints="" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_lock_24"
+                app:tint= "@color/LightGrey"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/_10sdp"/>
+        </soup.neumorphism.NeumorphCardView>
+
+        <TextView
+            android:id="@+id/createAcc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/neu_password"
+            android:layout_centerHorizontal="true"
+            android:text="Create new Account?"
+            android:textColor="#009688"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <soup.neumorphism.NeumorphButton
+            style="@style/Widget.Neumorph.Button"
+            android:id="@+id/button_login"
+            android:layout_width="280dp"
+            android:layout_height="70dp"
+            app:neumorph_shapeType="flat"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_below="@+id/createAcc"
+            android:layout_centerHorizontal="true"
+            android:text="Login"
+            android:textColor="@color/LightGrey"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/forgot_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:text="Forgot Password?"
+            android:textColor="#009688"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyle"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:elevation="10dp"
+        android:id="@+id/progressBar"
+        android:visibility="gone"/>
+
+</RelativeLayout>
+
+</ScrollView>

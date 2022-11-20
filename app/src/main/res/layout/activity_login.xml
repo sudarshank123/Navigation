@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/shape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape"/>
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="5dp"
+        android:layout_below="@+id/shape"
+        android:layout_marginTop="-20dp"
+        android:text="Welcome"
+        android:textSize="30sp"
+        android:textColor="@color/LightGrey"
+        android:fontFamily="@font/monoton"/>
+    <soup.neumorphism.NeumorphImageView
+        app:neumorph_shapeType="flat"
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcome"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/login_draw"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/loginAs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Login  As"
+        android:textSize="25sp"
+        android:paddingTop="5dp"
+        android:fontFamily="@font/monoton"
+        android:textColor="@color/LightGrey">
+    </TextView>
+    <soup.neumorphism.NeumorphButton
+        style="@style/Widget.Neumorph.Button"
+        android:id="@+id/ownerbutton"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        app:neumorph_shapeType="flat"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="Owner"
+        android:textSize="18sp"
+        android:textColor="@color/LightGrey"
+        android:layout_below="@+id/loginAs"
+       android:layout_marginTop="@dimen/_10sdp"
+        android:textAllCaps="true"/>
+    <soup.neumorphism.NeumorphButton
+        style="@style/Widget.Neumorph.Button"
+        android:id="@+id/trainebutton"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:neumorph_shapeType="flat"
+        android:layout_centerHorizontal="true"
+        android:text="Trainee"
+        android:textColor="@color/LightGrey"
+        android:layout_below="@+id/ownerbutton"
+        android:layout_marginTop="10dp"/>
+
+
+
+
+</RelativeLayout>

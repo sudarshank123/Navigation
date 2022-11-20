@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:id="@+id/trainee_drawer_layout"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/background"
+        android:layout_height="match_parent">
+        <soup.neumorphism.NeumorphCardView
+            app:neumorph_shapeType="flat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:neumorph_backgroundColor="@color/background"
+            app:neumorph_shadowColorDark="@color/dark_shadow"
+            app:neumorph_shadowColorLight="@color/light_shadow"
+            app:neumorph_shadowElevation="@dimen/_5sdp"
+            app:neumorph_shapeAppearance="@style/NeumorphismRoundCardImage">
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_height="wrap_content"/>
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/topAppBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:title="Dashboard"
+                    app:titleTextColor="@color/LightGrey"
+                    app:navigationIcon="@drawable/ic_baseline_menu_24"
+                    app:navigationIconTint="@color/LightGrey"
+                    android:background="?android:attr/selectableItemBackground"/>
+        </soup.neumorphism.NeumorphCardView>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/container"
+            android:layout_above="@id/bot"/>
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/bot"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:neumorph_backgroundColor="@color/background"
+            app:neumorph_shadowColorDark="@color/dark_shadow"
+            app:neumorph_shadowColorLight="@color/light_shadow"
+            app:neumorph_shadowElevation="@dimen/_5sdp"
+            app:neumorph_shapeAppearance="@style/NeumorphismRoundCardImage"
+            app:neumorph_shapeType="flat">
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/bottom_nav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:foregroundTint="@color/LightGrey"
+                    app:itemHorizontalTranslationEnabled="false"
+                    app:itemIconTint="@color/LightGrey"
+                    app:itemTextColor="@color/LightGrey"
+                    app:labelVisibilityMode="labeled"
+                    app:menu="@menu/bottom_nav" />
+        </soup.neumorphism.NeumorphCardView>
+    </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/trainee_nav_view"
+        android:layout_width="wrap_content"
+        android:background="@color/background"
+        app:itemTextColor="@color/LightGrey"
+        app:itemIconTint="@color/LightGrey"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/owner_drawer_header"
+        app:menu="@menu/owner_nav_drawer"/>
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+

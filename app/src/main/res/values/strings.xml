@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Navigation</string>
+
+    <!--****************************************************************************** ADD MEMBERS STRINGS ***********************8-->
+    <string name="add_members">Add Members</string>
+    <string name="select_plan">Select Plan</string>
+    <string name="id">ID*</string>
+    <string name="_01">01</string>
+    <string name="full_name">Full Name*</string>
+    <string name="enter_member_full_name">Enter Member Full Name</string>
+    <string name="email">Email*</string>
+    <string name="enter_member_email">Enter Member Email</string>
+    <string name="date_of_birth">Date of Birth*</string>
+    <string name="enter_member_dob">Enter Member DoB</string>
+    <string name="gender">Gender*</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="mobile_number">Mobile Number*</string>
+    <string name="_10_digits">10 digits</string>
+    <string name="address">Address*</string>
+    <string name="enter_member_address">Enter Member Address</string>
+    <string name="aadhaar_number">Aadhaar Number*</string>
+    <string name="enter_12_digits_aadhaar_number">Enter 12 digits Aadhaar Number</string>
+    <string name="select_plans">Select Plans*</string>
+    <string name="todo">TODO</string>
+    <string name="plan_amount">Plan Amount*</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="start_date">Start Date*</string>
+    <string name="end_date">Expiry Date*</string>
+    <string name="enter_end_date">Enter Expiry Date</string>
+    <!--***************************************************************************************************************************** -->
+</resources>

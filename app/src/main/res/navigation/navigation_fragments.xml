@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_dashboard">
+
+    <fragment android:id="@+id/navigation_dashboard"
+        android:name="com.example.navigation.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard"/>
+
+    <fragment android:id="@+id/navigation_payment"
+        android:name="com.example.navigation.PaymentFragment"
+        android:label="Payment"
+        tools:layout="@layout/fragment_payment"/>
+
+
+    <fragment android:id="@+id/navigation_protein"
+        android:name="com.example.navigation.ProteinFragment"
+        android:label="Protein"
+        tools:layout="@layout/fragment_protein"/>
+
+
+    <fragment android:id="@+id/navigation_news"
+        android:name="com.example.navigation.NewsFeedFragment"
+        android:label="News"
+        tools:layout="@layout/fragment_news_feed"/>
+</navigation>
