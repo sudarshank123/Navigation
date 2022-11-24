@@ -76,6 +76,7 @@
                     android:drawableTint="@color/LightGrey"
                     android:hint="@string/_01"
                     android:inputType="number"
+                    android:textColor="@color/LightGrey"
                     android:padding="@dimen/_10sdp"
                     android:textColorHint="#546E7A"
                     android:textSize="16sp" />
@@ -109,6 +110,7 @@
                     android:drawablePadding="@dimen/_5sdp"
                     android:drawableTint="@color/LightGrey"
                     android:hint="@string/enter_member_full_name"
+                    android:textColor="@color/LightGrey"
                     android:inputType="textPersonName"
                     android:padding="@dimen/_10sdp"
                     android:textColorHint="#546E7A"
@@ -143,6 +145,7 @@
                     android:drawablePadding="@dimen/_5sdp"
                     android:drawableTint="@color/LightGrey"
                     android:hint="@string/enter_member_email"
+                    android:textColor="@color/LightGrey"
                     android:inputType="textEmailAddress"
                     android:padding="@dimen/_10sdp"
                     android:textColorHint="#546E7A"
@@ -178,6 +181,7 @@
                     android:drawableTint="@color/LightGrey"
                     android:hint="@string/enter_member_dob"
                     android:inputType="date"
+                    android:textColor="@color/LightGrey"
                     android:padding="@dimen/_10sdp"
                     android:textColorHint="#546E7A"
                     android:textSize="16sp" />
@@ -243,6 +247,7 @@
                     android:drawablePadding="@dimen/_5sdp"
                     android:drawableTint="@color/LightGrey"
                     android:hint="@string/_10_digits"
+                    android:textColor="@color/LightGrey"
                     android:inputType="phone"
                     android:padding="@dimen/_10sdp"
                     android:textColorHint="#546E7A"
@@ -278,6 +283,7 @@
                     android:drawableTint="@color/LightGrey"
                     android:hint="@string/enter_member_address"
                     android:inputType="textPostalAddress"
+                    android:textColor="@color/LightGrey"
                     android:padding="@dimen/_10sdp"
                     android:textColorHint="#546E7A"
                     android:textSize="16sp"
@@ -316,6 +322,7 @@
                     android:inputType="number"
                     android:padding="@dimen/_10sdp"
                     android:textColorHint="#546E7A"
+                    android:textColor="@color/LightGrey"
                     android:textSize="16sp" />
             </soup.neumorphism.NeumorphCardView>
 
@@ -332,16 +339,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
+                android:textColorHint="@color/LightGrey"
                 android:layout_marginEnd="12dp"
+                app:boxStrokeWidth="@dimen/_1sdp"
+                app:boxStrokeColor="@color/LightGrey"
+                app:boxBackgroundMode="outline"
                 android:hint="@string/select_plan">
 
                 <AutoCompleteTextView
                     android:id="@+id/autoComplete"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/LightGrey"
                     android:inputType="none"
                     android:textColorHint="#546E7A"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -349,7 +362,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:padding="6dp"
-                android:text="Enrollment Fee"
+                android:text="@string/enrollment_fee"
                 android:textColor="@color/LightGrey"
                 android:textSize="16sp" />
             <soup.neumorphism.NeumorphCardView
@@ -371,8 +384,9 @@
                     android:drawableStart="@drawable/ic_baseline_currency_rupee_24"
                     android:drawablePadding="@dimen/_5sdp"
                     android:drawableTint="@color/LightGrey"
-                    android:hint="Enter Enrollment Fee(Optional)"
+                    android:hint="@string/enter_enrollment_fee_optional"
                     android:inputType="number"
+                    android:textColor="@color/LightGrey"
                     android:padding="@dimen/_10sdp"
                     android:textColorHint="#546E7A"
                     android:textSize="16sp" />
@@ -408,6 +422,7 @@
                     android:hint="@string/enter_amount"
                     android:inputType="number"
                     android:padding="@dimen/_10sdp"
+                    android:textColor="@color/LightGrey"
                     android:textColorHint="#546E7A"
                     android:textSize="16sp" />
             </soup.neumorphism.NeumorphCardView>
@@ -439,8 +454,9 @@
                     android:drawableStart="@drawable/ic_baseline_date_range_24"
                     android:drawablePadding="@dimen/_5sdp"
                     android:drawableTint="@color/LightGrey"
-                    android:hint="Enter Start Date"
+                    android:hint="@string/enter_start_date"
                     android:inputType="date"
+                    android:textColor="@color/LightGrey"
                     android:padding="@dimen/_10sdp"
                     android:textColorHint="#546E7A"
                     android:textSize="16sp" />
@@ -476,6 +492,7 @@
                     android:hint="@string/enter_end_date"
                     android:inputType="date"
                     android:padding="@dimen/_10sdp"
+                    android:textColor="@color/LightGrey"
                     android:textColorHint="#546E7A"
                     android:textSize="16sp" />
             </soup.neumorphism.NeumorphCardView>
@@ -484,7 +501,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:padding="6dp"
-                android:text="Bill Date*"
+                android:text="@string/bill_date"
                 android:textColor="@color/LightGrey"
                 android:textSize="16sp" />
             <soup.neumorphism.NeumorphCardView
@@ -506,22 +523,29 @@
                     android:drawableStart="@drawable/ic_baseline_date_range_24"
                     android:drawablePadding="@dimen/_5sdp"
                     android:drawableTint="@color/LightGrey"
-                    android:hint="Enter Bill Date"
+                    android:hint="@string/enter_bill_date"
                     android:inputType="date"
                     android:padding="@dimen/_10sdp"
+                    android:textColor="@color/LightGrey"
                     android:textColorHint="#546E7A"
                     android:textSize="16sp" />
             </soup.neumorphism.NeumorphCardView>
             <soup.neumorphism.NeumorphButton
                 style="@style/Widget.Neumorph.Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/member_submit_btn"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="60dp"
                 app:neumorph_shapeType="flat"
-                android:textStyle="bold"
                 android:layout_gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="16sp"
                 android:textColor="@color/LightGrey"
+                android:layout_marginBottom="@dimen/_50sdp"
+                app:neumorph_backgroundColor="@color/background"
+                app:neumorph_shadowColorDark="@color/dark_shadow"
+                app:neumorph_shadowColorLight="@color/light_shadow"
+                app:neumorph_shadowElevation="@dimen/_5sdp"
                 android:text="Submit"/>
-
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

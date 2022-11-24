@@ -12,36 +12,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/shape"/>
+    <ImageView
+        app:neumorph_shapeType="flat"
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_210sdp"
+        android:layout_marginTop="@dimen/_80sdp"
+        android:src="@drawable/login2"
+        android:layout_centerHorizontal="true"/>
     <TextView
         android:id="@+id/welcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:paddingTop="5dp"
-        android:layout_below="@+id/shape"
-        android:layout_marginTop="-20dp"
+        android:layout_below="@+id/img"
+        android:layout_marginTop="@dimen/_10sdp"
         android:text="Welcome"
-        android:textSize="30sp"
+        android:textSize="32sp"
         android:textColor="@color/LightGrey"
         android:fontFamily="@font/monoton"/>
-    <soup.neumorphism.NeumorphImageView
-        app:neumorph_shapeType="flat"
-        android:id="@+id/img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/welcome"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/login_draw"
-        android:layout_centerHorizontal="true"/>
     <TextView
         android:id="@+id/loginAs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/img"
+        android:layout_below="@+id/welcome"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="-15dp"
         android:text="Login  As"
-        android:textSize="25sp"
+        android:textSize="27sp"
         android:paddingTop="5dp"
         android:fontFamily="@font/monoton"
         android:textColor="@color/LightGrey">
@@ -50,14 +49,15 @@
         style="@style/Widget.Neumorph.Button"
         android:id="@+id/ownerbutton"
         android:layout_width="280dp"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         app:neumorph_shapeType="flat"
         android:gravity="center"
         android:textStyle="bold"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:text="Owner"
-        android:textSize="18sp"
+        android:textSize="16sp"
+        android:onClick="callNextPage"
         android:textColor="@color/LightGrey"
         android:layout_below="@+id/loginAs"
        android:layout_marginTop="@dimen/_10sdp"
@@ -66,16 +66,16 @@
         style="@style/Widget.Neumorph.Button"
         android:id="@+id/trainebutton"
         android:layout_width="280dp"
-        android:layout_height="70dp"
+        android:layout_height="60dp"
         android:gravity="center"
         android:textStyle="bold"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:neumorph_shapeType="flat"
         android:layout_centerHorizontal="true"
         android:text="Trainee"
         android:textColor="@color/LightGrey"
         android:layout_below="@+id/ownerbutton"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="15dp"/>
 
 
 

@@ -4,32 +4,25 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
-import android.util.Base64;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -44,15 +37,8 @@ import com.karumi.dexter.listener.PermissionDeniedResponse;
 import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
-import com.squareup.picasso.Picasso;
-
-
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-
-
 import de.hdodenhof.circleimageview.CircleImageView;
 
 
@@ -75,7 +61,6 @@ public class OwnerProfileActivity extends AppCompatActivity {
 
 
 //********************************************************upload profile image*********************************
-
         button = findViewById(R.id.fabUpload);
         profileImage = findViewById(R.id.profile_img);
         button.setOnClickListener(new View.OnClickListener() {
@@ -94,10 +79,7 @@ public class OwnerProfileActivity extends AppCompatActivity {
                 finish();
             }
         });
-
 //**********************************************************************************
-
-
      //   getSupportActionBar().setTitle("Profile");                //title of toolbar top
         textViewWelcome = findViewById(R.id.textView_show_welcome);
         textViewFullName = findViewById(R.id.textView_show_full_name);
@@ -109,17 +91,14 @@ public class OwnerProfileActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         authProfile = FirebaseAuth.getInstance();
         FirebaseUser firebaseUser =authProfile.getCurrentUser();
-
         if(firebaseUser == null){
             Toast.makeText(OwnerProfileActivity.this, "Something went wrong! Owner Details are not available at the Moment", Toast.LENGTH_SHORT).show();
-
         }else {
             checkIfEmailVerified(firebaseUser);
             progressBar.setVisibility(View.VISIBLE);
             showOwnerProfile(firebaseUser);
         }
     }
-
     //******************************************************profileImage****************************************************************************
         private void checkP(){
             Dexter.withContext(OwnerProfileActivity.this)
@@ -144,7 +123,6 @@ public class OwnerProfileActivity extends AppCompatActivity {
                         }
                     }).check();
         }
-//BitmapFactory.decodeByteArray(Base64.decode(oo,Base64.DEFAULT), 0, Base64.decode(oo,Base64.DEFAULT).length)
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -156,9 +134,7 @@ public class OwnerProfileActivity extends AppCompatActivity {
                     ByteArrayOutputStream stream = new ByteArrayOutputStream();
                     original.compress(Bitmap.CompressFormat.JPEG,10,stream);
                     byte[] imageByte = stream.toByteArray();
-                    SaveImage(original);
                     profileImage.setImageBitmap(original);
-                    Log.d("SudarshanApp", String.valueOf(original));
                     uploadImage(imageByte);
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -187,25 +163,6 @@ public class OwnerProfileActivity extends AppCompatActivity {
         });
     }
 
-    private static void SaveImage(Bitmap finalBitmap) {
-
-        String root = Environment.getExternalStorageDirectory().getAbsolutePath();
-        File myDir = new File(root + "/saved_images");
-        Log.d("sudarshanroot",root);
-        myDir.mkdirs();
-
-        String fname = "sudarshan135.jpg";
-        File file = new File (myDir, fname);
-        if (file.exists ()) file.delete ();
-        try {
-            FileOutputStream out = new FileOutputStream(file);
-            finalBitmap.compress(Bitmap.CompressFormat.JPEG, 90, out);
-            out.flush();
-            out.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
     //*******************************************************************************************************************************************8
     //User coming to UserProfileActivity after successful registration
     private void checkIfEmailVerified(FirebaseUser firebaseUser) {
@@ -262,14 +219,10 @@ public class OwnerProfileActivity extends AppCompatActivity {
                     textViewGender.setText(gender);
                     textViewMobile.setText(mobile);
                     textViewAadhaar.setText(aadhaar);
-
-                    //*****************************************************************************************
-
                 }
                 //**************************************************************************************************************8
                 progressBar.setVisibility(View.GONE);
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(OwnerProfileActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();

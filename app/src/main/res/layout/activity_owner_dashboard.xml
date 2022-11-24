@@ -8,9 +8,10 @@
     android:background="@color/background"
     android:id="@+id/owner_drawer_layout"
     tools:context=".OwnerDashboardActivity">
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
         <soup.neumorphism.NeumorphCardView
             android:id="@+id/neu_toolbar"
             app:neumorph_shapeType="flat"
@@ -33,68 +34,111 @@
                 app:navigationIconTint="@color/LightGrey"
                 app:navigationIcon="@drawable/ic_baseline_menu_24"
                 android:background="@color/background"/>
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:src="@drawable/logo1"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/_210sdp"/>
         </soup.neumorphism.NeumorphCardView>
-        <soup.neumorphism.NeumorphCardView
-            android:id="@+id/neu_addMember"
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_100sdp"
-            android:layout_below="@+id/neu_toolbar"
-            app:neumorph_shapeType="flat"
-            app:neumorph_backgroundColor="@color/background"
-            app:neumorph_shadowColorDark="@color/dark_shadow"
-            app:neumorph_shadowColorLight="@color/light_shadow"
-            app:neumorph_shadowElevation="@dimen/_5sdp"
-            app:neumorph_shapeAppearance="@style/NeumorphismCard"
-            android:layout_margin="@dimen/_10sdp">
-            <Button
-
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_width="@dimen/_70sdp"
-                android:layout_height="@dimen/_70sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:background="?android:attr/selectableItemBackground"
-                android:id="@+id/add_btn"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="@dimen/_5sdp"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="@dimen/_30sdp"
-                    android:layout_height="@dimen/_30sdp"
-                    android:src="@drawable/members"
-                    android:layout_gravity="center_horizontal"
-                    app:tint="@color/LightGrey"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Add Members"
-                    android:textSize="@dimen/_10sdp"
-                    android:layout_gravity="center_horizontal"
-                    android:textColor="@color/LightGrey"/>
-                <ImageView
-                    android:layout_width="@dimen/_20sdp"
-                    android:layout_height="@dimen/_20sdp"
-                    android:src="@drawable/addbtn"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="@dimen/_5sdp"/>
-            </LinearLayout>
-        </soup.neumorphism.NeumorphCardView>
-    </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/neu_addMember"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                app:neumorph_shapeType="flat"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:neumorph_backgroundColor="@color/background"
+                app:neumorph_shadowColorDark="@color/dark_shadow"
+                app:neumorph_shadowColorLight="@color/light_shadow"
+                app:neumorph_shadowElevation="@dimen/_5sdp"
+                app:neumorph_shapeAppearance="@style/NeumorphismCard">
+                <Button
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:id="@+id/add_btn"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_5sdp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/members"
+                        android:layout_gravity="center_horizontal"
+                        app:tint="@color/LightGrey"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Members"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/LightGrey"/>
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/addbtn"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+                </LinearLayout>
+            </soup.neumorphism.NeumorphCardView>
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/neu_addCategory"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                app:neumorph_shapeType="flat"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:neumorph_backgroundColor="@color/background"
+                app:neumorph_shadowColorDark="@color/dark_shadow"
+                app:neumorph_shadowColorLight="@color/light_shadow"
+                app:neumorph_shadowElevation="@dimen/_5sdp"
+                app:neumorph_shapeAppearance="@style/NeumorphismCard">
+                <Button
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:id="@+id/add_category_btn"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_5sdp"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/ic_baseline_event_note_24"
+                        android:layout_gravity="center_horizontal"
+                        app:tint="@color/LightGrey"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Plan"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/LightGrey"/>
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/addbtn"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+                </LinearLayout>
+            </soup.neumorphism.NeumorphCardView>
+        </LinearLayout>
+    </LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/owner_nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        app:subheaderColor="#C060A1"
         app:itemIconTint="@color/LightGrey"
         app:itemTextColor="@color/LightGrey"
+        app:itemRippleColor="@color/LightGrey"
         android:background="@color/background"
         app:headerLayout="@layout/owner_drawer_header"
         app:menu="@menu/owner_nav_drawer"/>

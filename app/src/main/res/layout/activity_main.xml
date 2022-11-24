@@ -73,8 +73,10 @@
         android:background="@color/background"
         app:itemTextColor="@color/LightGrey"
         app:itemIconTint="@color/LightGrey"
+        app:subheaderColor="#C060A1"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        app:itemRippleColor="@color/LightGrey"
         app:headerLayout="@layout/owner_drawer_header"
         app:menu="@menu/owner_nav_drawer"/>
 </androidx.drawerlayout.widget.DrawerLayout>

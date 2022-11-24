@@ -13,11 +13,13 @@
         <soup.neumorphism.NeumorphCardView
             android:layout_width="@dimen/_50sdp"
             android:layout_height="@dimen/_50sdp">
+
             <Button
                 android:id="@+id/back_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="?android:attr/selectableItemBackground"/>
+                android:background="?android:attr/selectableItemBackground"
+                tools:ignore="TouchTargetSizeCheck" />
             <ImageView
                 android:layout_width="@dimen/_25sdp"
                 android:layout_height="@dimen/_25sdp"
@@ -43,29 +45,36 @@
                 android:src="@drawable/blankavatar"
                 android:id="@+id/profile_img"/>
         </soup.neumorphism.NeumorphCardView>
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fabUpload"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="-55dp"
-                android:src="@drawable/ic_baseline_add_24"
-                android:tint="@color/white"
-                android:clickable="true"
-                app:fabSize="mini"
-                android:layout_marginStart="50dp"/>
 
-            <TextView
-                android:id="@+id/textView_show_welcome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="Loading"
-                android:textSize="@dimen/_20sdp"
-                android:textStyle="bold"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="@font/abril_fatface"
-                android:textColor="@color/LightGrey"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabUpload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="-55dp"
+            android:clickable="true"
+            android:contentDescription="TODO"
+            android:focusable="true"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:src="@drawable/ic_baseline_add_24"
+            android:tint="@color/white"
+            app:fabSize="mini"
+            tools:ignore="DuplicateSpeakableTextCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView_show_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/abril_fatface"
+            android:hint="Loading"
+            android:textColor="@color/LightGrey"
+            android:textColorHint="#607D8B"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
         <soup.neumorphism.NeumorphCardView
             android:layout_margin="@dimen/_10sdp"
             android:padding="@dimen/_7sdp"
@@ -101,17 +110,20 @@
                             android:layout_width="@dimen/_22sdp"
                             android:layout_height="@dimen/_22sdp"
                             android:id="@+id/ic_profile"
-                            android:background="@drawable/ic_baseline_person_24"/>
+                            android:background="@drawable/ic_baseline_person_24"
+                            android:contentDescription="TODO" />
                     </soup.neumorphism.NeumorphCardView>
+
                     <TextView
+                        android:id="@+id/textView_show_full_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView_show_full_name"
                         android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
                         android:hint="Lodaing...."
                         android:textColor="@color/LightGrey"
-                        android:layout_marginStart="10dp"
-                        android:textSize="16sp"/>
+                        android:textColorHint="#546E7A"
+                        android:textSize="16sp" />
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/linear_2"
@@ -137,15 +149,17 @@
                             android:id="@+id/ic_email"
                             android:background="@drawable/ic_baseline_email_24"/>
                     </soup.neumorphism.NeumorphCardView>
+
                     <TextView
-                        android:layout_gravity="center_vertical"
+                        android:id="@+id/textView_show_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView_show_email"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
                         android:hint="Lodaing...."
                         android:textColor="@color/LightGrey"
-                        android:layout_marginStart="10dp"
-                        android:textSize="16sp"/>
+                        android:textColorHint="#546E7A"
+                        android:textSize="16sp" />
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/linear_3"
@@ -171,15 +185,17 @@
                             android:id="@+id/ic_dob"
                             android:background="@drawable/birth"/>
                     </soup.neumorphism.NeumorphCardView>
+
                     <TextView
+                        android:id="@+id/textView_show_dob"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView_show_dob"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_10sdp"
                         android:hint="Lodaing...."
                         android:textColor="@color/LightGrey"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_gravity="center_vertical"
-                        android:textSize="16sp"/>
+                        android:textColorHint="#546E7A"
+                        android:textSize="16sp" />
                 </LinearLayout>
                 <LinearLayout
                   android:id="@+id/linear_4"
@@ -204,15 +220,17 @@
                           android:layout_gravity="center"
                           android:background="@drawable/ic_baseline_phone_24"/>
                   </soup.neumorphism.NeumorphCardView>
-                  <TextView
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:id="@+id/textView_show_number"
-                      android:layout_gravity="center_vertical"
-                      android:hint="Lodaing...."
-                      android:textColor="@color/LightGrey"
-                      android:layout_marginStart="10dp"
-                      android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/textView_show_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:hint="Lodaing...."
+                        android:textColor="@color/LightGrey"
+                        android:textColorHint="#546E7A"
+                        android:textSize="16sp" />
                 </LinearLayout>
                 <LinearLayout
                      android:id="@+id/linear_5"
@@ -238,15 +256,17 @@
                              android:layout_gravity="center"
                              android:background="@drawable/gender"/>
                      </soup.neumorphism.NeumorphCardView>
-                     <TextView
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:id="@+id/textView_show_gender"
+
+                    <TextView
+                        android:id="@+id/textView_show_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                         android:hint="Lodaing...."
-                         android:textColor="@color/LightGrey"
-                         android:layout_marginStart="10dp"
-                         android:textSize="16sp"/>
+                        android:layout_marginStart="10dp"
+                        android:hint="Lodaing...."
+                        android:textColor="@color/LightGrey"
+                        android:textColorHint="#546E7A"
+                        android:textSize="16sp" />
                  </LinearLayout>
                 <LinearLayout
                     android:id="@+id/linear_6"
@@ -272,15 +292,17 @@
                             android:layout_gravity="center"
                             android:background="@drawable/aadhaar"/>
                     </soup.neumorphism.NeumorphCardView>
+
                     <TextView
+                        android:id="@+id/textView_show_aadhaar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textView_show_aadhaar"
-                        android:hint="Lodaing...."
-                        android:textColor="@color/LightGrey"
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="10dp"
-                        android:textSize="16sp"/>
+                        android:hint="Lodaing...."
+                        android:textColor="@color/LightGrey"
+                        android:textColorHint="#546E7A"
+                        android:textSize="16sp" />
                 </LinearLayout>
                 <ProgressBar
                     android:layout_width="wrap_content"

@@ -33,13 +33,11 @@ public class AddMembersActivity extends AppCompatActivity {
                 Intent intent = new Intent(AddMembersActivity.this,OwnerDashboardActivity.class);
                 startActivity(intent);
             }
-
         });
 //************************************************************************************************************************
         autoCompleteTextView = findViewById(R.id.autoComplete);
         adapterItems = new ArrayAdapter<String>(this,R.layout.category_items,items);
         autoCompleteTextView.setAdapter(adapterItems);
-
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -47,7 +45,7 @@ public class AddMembersActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Item: "+item, Toast.LENGTH_SHORT).show();
             }
         });
-
+//******************************************************************************************************************************
 
 
 

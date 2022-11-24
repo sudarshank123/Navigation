@@ -4,139 +4,137 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/background"
+    android:background="#002E94"
     tools:context=".TraineeActivity">
-    <ImageView
-        android:id="@+id/shape"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/shape"
-        android:contentDescription="TODO" />
-    <soup.neumorphism.NeumorphTextView
-        app:neumorph_shapeType="flat"
-        android:id="@+id/traineeDetails"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/shape"
-        android:text="Trainee Details !"
-        android:textColor="@color/LightGrey"
-        android:textSize="22sp"
-        android:layout_marginTop="-100dp"
-        android:fontFamily="@font/abril_fatface"
-        android:layout_centerHorizontal="true"/>
-    <ViewFlipper
-        android:id="@+id/flipper"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_250sdp"
-        android:alpha="0.7"
-        android:layout_below="@id/traineeDetails"
-        android:layout_marginTop="-10dp"
-        android:layout_centerHorizontal="true"/>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/flipper"
-        android:layout_marginTop="0dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
-        <soup.neumorphism.NeumorphCardView
-            android:id="@+id/neu_Mobile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Widget.Neumorph.CardView"
-            app:neumorph_shapeType="pressed"
-            app:neumorph_backgroundColor="@color/background"
-            app:neumorph_shadowColorDark="@color/dark_shadow"
-            app:neumorph_shadowColorLight="@color/light_shadow"
-            app:neumorph_shadowElevation="@dimen/_5sdp"
-            app:neumorph_shapeAppearance="@style/NeumorphismCard">
-            <EditText
-                android:id="@+id/editTextPhone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="phone"
-                android:hint="Email"
-                android:drawableStart="@drawable/ic_baseline_email_24"
-                android:drawableTint="@color/LightGrey"
-                android:drawablePadding="@dimen/_5sdp"
-                android:textSize="18sp"
-                android:padding="@dimen/_12sdp"
-                android:textColorHint="#546E7A"
-                android:textCursorDrawable="@drawable/cursor"
-                android:background="@drawable/no_background"
-                android:autofillHints="" />
-        </soup.neumorphism.NeumorphCardView>
-
-        <soup.neumorphism.NeumorphCardView
-            android:layout_below="@id/neu_Mobile"
-            android:id="@+id/neu1"
-            style="@style/Widget.Neumorph.CardView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:neumorph_shapeType="pressed"
-            app:neumorph_backgroundColor="@color/background"
-            app:neumorph_shadowColorDark="@color/dark_shadow"
-            app:neumorph_shadowColorLight="@color/light_shadow"
-            app:neumorph_shadowElevation="@dimen/_5sdp"
-            app:neumorph_shapeAppearance="@style/NeumorphismCard">
-           <EditText
-               android:id="@+id/editText_login_passKey"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-               android:layout_centerHorizontal = "true"
-                android:inputType="textPassword"
-                android:hint="PassKey"
-                android:padding="@dimen/_12sdp"
-                android:drawablePadding="@dimen/_5sdp"
-               android:layout_marginStart="@dimen/_21sdp"
-                android:drawableEnd="@drawable/ic_baseline_visibility_off_24"
-                android:drawableTint="@color/LightGrey"
-                android:longClickable="false"
-               android:textColorHint="#546E7A"
-                android:background="@drawable/no_background"
-               android:autofillHints="" />
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_lock_24"
-                app:tint="@color/LightGrey"
-                android:padding="@dimen/_10sdp"
-                android:contentDescription="TODO" />
-        </soup.neumorphism.NeumorphCardView>
-
-        <soup.neumorphism.NeumorphTextView
-            android:id="@+id/forgotpasskey"
+   <!--
+        <ImageView
+            android:id="@+id/shape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/neu1"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:text="Forgot PassKey?"
-            android:textColor="#009688"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:neumorph_shapeType="flat" />
-        <soup.neumorphism.NeumorphButton
-            style="@style/Widget.Neumorph.Button"
-            android:id="@+id/editTextButton"
-            android:layout_width="230dp"
-            android:layout_height="70dp"
-            app:neumorph_shapeType="flat"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:text="Submit"
-            android:layout_marginTop="10dp"
-            android:textSize="18sp"
-            android:layout_below="@+id/forgotpasskey"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/LightGrey"/>
+            android:src="@drawable/shape"
+            android:contentDescription="TODO" />   -->
+
+        <ViewFlipper
+            android:id="@+id/flipper"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            android:layout_centerHorizontal="true"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/flipper"
+            android:background="@drawable/background_details"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+            <soup.neumorphism.NeumorphTextView
+                app:neumorph_shapeType="flat"
+                android:id="@+id/traineeDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trainee Details !"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="@color/LightGrey"
+                android:textSize="22sp"
+                android:fontFamily="@font/abril_fatface"
+                android:layout_centerHorizontal="true"/>
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/neu_Mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_below="@id/traineeDetails"
+                app:neumorph_shapeType="pressed"
+                app:neumorph_backgroundColor="@color/background"
+                app:neumorph_shadowColorDark="@color/dark_shadow"
+                app:neumorph_shadowColorLight="@color/light_shadow"
+                app:neumorph_shadowElevation="@dimen/_5sdp"
+                app:neumorph_shapeAppearance="@style/NeumorphismCard">
+                <EditText
+                    android:id="@+id/editTextPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:hint="Email"
+                    android:textColor="@color/LightGrey"
+                    android:drawableStart="@drawable/ic_baseline_email_24"
+                    android:drawableTint="@color/LightGrey"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:textSize="16sp"
+                    android:padding="@dimen/_10sdp"
+                    android:textColorHint="#546E7A"
+                    android:textCursorDrawable="@drawable/cursor"
+                    android:background="@drawable/no_background"
+                    android:autofillHints="" />
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_below="@id/neu_Mobile"
+                android:id="@+id/neu1"
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:neumorph_shapeType="pressed"
+                app:neumorph_backgroundColor="@color/background"
+                app:neumorph_shadowColorDark="@color/dark_shadow"
+                app:neumorph_shadowColorLight="@color/light_shadow"
+                app:neumorph_shadowElevation="@dimen/_5sdp"
+                app:neumorph_shapeAppearance="@style/NeumorphismCard">
+                <EditText
+                    android:id="@+id/editText_login_passKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal = "true"
+                    android:inputType="textPassword"
+                    android:hint="PassKey"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@color/LightGrey"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_21sdp"
+                    android:drawableEnd="@drawable/ic_baseline_visibility_off_24"
+                    android:drawableTint="@color/LightGrey"
+                    android:longClickable="false"
+                    android:textSize="16sp"
+                    android:textColorHint="#546E7A"
+                    android:background="@drawable/no_background"
+                    android:autofillHints="" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_lock_24"
+                    app:tint="@color/LightGrey"
+                    android:padding="@dimen/_10sdp"
+                    android:contentDescription="TODO" />
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphTextView
+                android:id="@+id/forgotpasskey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/neu1"
+                android:layout_centerHorizontal="true"
+                android:text="Forgot PassKey?"
+                android:textColor="#002E94"
+                android:textColorLink="#002E94"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:neumorph_shapeType="flat" />
+            <soup.neumorphism.NeumorphButton
+                style="@style/Widget.Neumorph.Button"
+                android:id="@+id/editTextButton"
+                android:layout_width="230dp"
+                android:layout_height="60dp"
+                app:neumorph_shapeType="flat"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Submit"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:layout_below="@+id/forgotpasskey"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/LightGrey"/>
 
 
 
+        </RelativeLayout>
     </RelativeLayout>
-
-
-
-</RelativeLayout>

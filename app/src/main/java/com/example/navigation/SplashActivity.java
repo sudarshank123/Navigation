@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private static final int  DELAY_TIME = 3000;
+    private static final int  DELAY_TIME = 5000;
 
 
     @Override

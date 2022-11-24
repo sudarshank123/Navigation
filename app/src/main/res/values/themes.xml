@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
 
-    <style name="Theme.Navigation" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Theme.Navigation" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="android:windowDisablePreview">false</item>
         <item name="colorPrimary">@color/textcolor</item>
@@ -37,7 +37,7 @@
 
     <style name="NeumorphismCard">
          <item name="neumorph_cornerFamily">rounded</item>
-         <item name="neumorph_cornerSize">@dimen/_12sdp</item>
+         <item name="neumorph_cornerSize">@dimen/_3sdp</item>
     </style>
 
     <style name="NeumorphismCardImage">

@@ -60,9 +60,7 @@ public class CreateActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 //***************************************************************************************************************************************
-
         Toast.makeText(CreateActivity.this, "You can register now", Toast.LENGTH_LONG).show();
         editTextRegisterFullName = findViewById(R.id.editText_register_full_name);
         editTextRegisterEmail = findViewById(R.id.editText_register_email);
@@ -72,14 +70,10 @@ public class CreateActivity extends AppCompatActivity {
         editTextRegisterConfirmPwd = findViewById(R.id.editText_register_confirm_password);
         editTextRegisterAadhaarNumber = findViewById(R.id.editText_register_aadhaarNumber);
         progressBar = findViewById(R.id.progressBar);
-
         //RadioButton for Gender
         radioGroupRegisterGender = findViewById(R.id.radio_group_register_gender);
         radioGroupRegisterGender.clearCheck();
-
-
-        //******************************************************************************************************************************8
-
+//******************************************************************************************************************************8
         //Setting up DatePicker on EditText
         editTextRegisterDoB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,21 +82,17 @@ public class CreateActivity extends AppCompatActivity {
                 int day = calendar.get(Calendar.DAY_OF_MONTH);
                 int month = calendar.get(Calendar.MONTH);
                 int year = calendar.get(Calendar.YEAR);
-
                 //Dte picker Dialog
                 picker = new DatePickerDialog(CreateActivity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                         editTextRegisterDoB.setText(dayOfMonth + "/" + (month +1) + "/" + year);
-
                     }
                 }, year, month,day);
                 picker.show();
             }
         });
-
-
-        //*****************************************************************************************************************************************
+//*****************************************************************************************************************************************
         Button buttonRegister = findViewById(R.id.button_register);
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -187,12 +177,8 @@ public class CreateActivity extends AppCompatActivity {
                 }
             }
         });
-
-
-
     }
-
-    //End of OnCreate Method*************************************************************************************************************************************************
+//**************************************************End of OnCreate Method*************************************************************************************************************************************************
 
     // Register User using the credentials given
     private void registerUser(String textFullName, String textEmail, String textDoB, String textGender, String textMobile, String textPwd, String textAadhaarNumber) {
@@ -218,31 +204,21 @@ public class CreateActivity extends AppCompatActivity {
                     referenceProfile.child(firebaseUser.getUid()).setValue(writeUserDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-
                             if(task.isSuccessful()){
-
                                 //Send Verification Email
                                 firebaseUser.sendEmailVerification();
-
                                 Toast.makeText(CreateActivity.this, "User registered successfully. Please verify your Email", Toast.LENGTH_LONG).show();
-
                                //Open User Profile after successful registration
                                  Intent intent = new Intent(CreateActivity.this, OwnerDashboardActivity.class);
-
                                 //To prevent user from returning back to Register Activity on pressing back button after registration
                                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
                                 finish(); //to close Register Activity
-
                             }else{
                                 Toast.makeText(CreateActivity.this, "User registered failed. Please try again", Toast.LENGTH_LONG).show();
-
                             }
                             //Hide Progressbar wheather user creation is successful or failed
                             progressBar.setVisibility(View.GONE);
-
-
-
                         }
                     });
                 }else{
@@ -265,9 +241,5 @@ public class CreateActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
-
-
 }

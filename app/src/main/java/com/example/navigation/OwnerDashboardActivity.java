@@ -21,16 +21,26 @@ import com.google.firebase.database.annotations.NotNull;
 public class OwnerDashboardActivity extends AppCompatActivity {
 
     private FirebaseAuth logout;
-    Button addbutton;
+    Button add_member_button, add_category_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner_dashboard);
 
+
+        add_category_button = findViewById(R.id.add_category_btn);
+        add_category_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OwnerDashboardActivity.this, AddCategoryActivity.class);
+                startActivity(intent);
+            }
+        });
+
 //***************************************************************************************************************************************************
-        addbutton = findViewById(R.id.add_btn);
-        addbutton.setOnClickListener(new View.OnClickListener() {
+        add_member_button = findViewById(R.id.add_btn);
+        add_member_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(OwnerDashboardActivity.this, AddMembersActivity.class);
