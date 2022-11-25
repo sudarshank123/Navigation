@@ -13,6 +13,7 @@
         android:background="@color/background"
         android:layout_height="match_parent">
         <soup.neumorphism.NeumorphCardView
+            android:id="@+id/neu_toolappbar_user"
             app:neumorph_shapeType="flat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,6 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/container"
+            android:layout_below="@id/neu_toolappbar_user"
             android:layout_above="@id/bot"/>
         <soup.neumorphism.NeumorphCardView
             android:id="@+id/bot"

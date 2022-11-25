@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.annotations.NotNull;
@@ -21,33 +23,47 @@ import com.google.firebase.database.annotations.NotNull;
 public class OwnerDashboardActivity extends AppCompatActivity {
 
     private FirebaseAuth logout;
-    Button add_member_button, add_category_button;
+
+
+
+    BottomNavigationView ownerbottomNavigationView;
+    OwnerDashboardFragment ownerdashboardFragment = new OwnerDashboardFragment();
+    OwnerPaymentFragment ownerpaymentFragment = new OwnerPaymentFragment();
+    OwnerProteinFragment ownerproteinFragment = new OwnerProteinFragment();
+    OwnerNewsFeedFragment ownernewsFeedFragment = new OwnerNewsFeedFragment();
+    private FirebaseAuth mFirebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner_dashboard);
 
+//******************************************************Owner Bottom Navigation*****************************************************************************
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        ownerbottomNavigationView = findViewById(R.id.owner_bottom_nav);
+        //Replace Container with dashboard Fragment
+        getSupportFragmentManager().beginTransaction().replace(R.id.owner_container, ownerdashboardFragment).commit();
 
-        add_category_button = findViewById(R.id.add_category_btn);
-        add_category_button.setOnClickListener(new View.OnClickListener() {
+        ownerbottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(OwnerDashboardActivity.this, AddCategoryActivity.class);
-                startActivity(intent);
+            public boolean onNavigationItemSelected(MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.navigation_dashboard_owner:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.owner_container, ownerdashboardFragment).commit();
+                        return true;
+                    case R.id.navigation_payment_owner:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.owner_container, ownerpaymentFragment).commit();
+                        return true;
+                    case R.id.navigation_protein_owner:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.owner_container, ownerproteinFragment).commit();
+                        return true;
+                    case R.id.navigation_news_owner:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.owner_container, ownernewsFeedFragment).commit();
+                        return true;
+                }
+                return false;
             }
         });
-
-//***************************************************************************************************************************************************
-        add_member_button = findViewById(R.id.add_btn);
-        add_member_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(OwnerDashboardActivity.this, AddMembersActivity.class);
-                startActivity(intent);
-            }
-        });
-
 //*******************************************************************************Navigation Drawer*****************************************************************************
         logout = FirebaseAuth.getInstance();
         MaterialToolbar toolbar = findViewById(R.id.topAppBar);
