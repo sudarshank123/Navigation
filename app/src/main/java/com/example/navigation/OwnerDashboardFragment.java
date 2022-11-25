@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
+
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +14,7 @@ import android.widget.Button;
 
 public class OwnerDashboardFragment extends Fragment {
 
-    Button add_member_button, add_category_button;
+    Button add_member_button, add_category_button, available_plan_button, total_member_button;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,10 +39,26 @@ public class OwnerDashboardFragment extends Fragment {
                 startActivity(intent);
             }
         });
+//***************************************************************************************************************************************************
+        available_plan_button = view.findViewById(R.id.availablePlan_btn);
+        available_plan_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AvailablePlanActivity.class);
+                startActivity(intent);
+            }
+        });
+//***************************************************************************************************************************************************
+        total_member_button = view.findViewById(R.id.total_member_btn);
+        total_member_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), TotalMembersActivity.class);
+                startActivity(intent);
+            }
+        });
 
 //***************************************************************************************************************************************************
-
-
 
 
 

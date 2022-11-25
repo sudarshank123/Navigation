@@ -58,6 +58,7 @@
             android:focusable="true"
             android:minWidth="48dp"
             android:minHeight="48dp"
+            android:backgroundTint="@color/LightGrey"
             android:src="@drawable/ic_baseline_add_24"
             android:tint="@color/white"
             app:fabSize="mini"

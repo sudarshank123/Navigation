@@ -34,7 +34,7 @@ public class AddMembersActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-//************************************************************************************************************************
+//*************************************************dropdown menu***********************************************************************
         autoCompleteTextView = findViewById(R.id.autoComplete);
         adapterItems = new ArrayAdapter<String>(this,R.layout.category_items,items);
         autoCompleteTextView.setAdapter(adapterItems);

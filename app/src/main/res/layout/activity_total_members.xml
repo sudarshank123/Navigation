@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".TotalMembersActivity">
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/neu_totalMembers"
+        app:neumorph_shapeType="flat"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        app:neumorph_backgroundColor="@color/background"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        app:neumorph_shadowElevation="@dimen/_5sdp"
+        app:neumorph_shapeAppearance="@style/NeumorphismRoundCardImage">
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/todo"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:tint="@color/LightGrey"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Members"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@color/LightGrey"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+    </soup.neumorphism.NeumorphCardView>
+
+</LinearLayout>

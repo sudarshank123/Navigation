@@ -50,42 +50,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:text="@string/id"
-                android:textColor="@color/LightGrey"
-                android:textSize="16sp" />
-            <soup.neumorphism.NeumorphCardView
-                style="@style/Widget.Neumorph.CardView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:neumorph_backgroundColor="@color/background"
-                app:neumorph_shadowColorDark="@color/dark_shadow"
-                app:neumorph_shadowColorLight="@color/light_shadow"
-                app:neumorph_shadowElevation="@dimen/_5sdp"
-                app:neumorph_shapeAppearance="@style/NeumorphismCard"
-                app:neumorph_shapeType="pressed">
-
-                <EditText
-                    android:id="@+id/editText_register_memberID"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autofillHints=""
-                    android:background="@drawable/no_background"
-                    android:drawableStart="@drawable/id"
-                    android:drawablePadding="@dimen/_5sdp"
-                    android:drawableTint="@color/LightGrey"
-                    android:hint="@string/_01"
-                    android:inputType="number"
-                    android:textColor="@color/LightGrey"
-                    android:padding="@dimen/_10sdp"
-                    android:textColorHint="#546E7A"
-                    android:textSize="16sp" />
-            </soup.neumorphism.NeumorphCardView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_10sdp"
                 android:text="@string/full_name"
                 android:textColor="@color/LightGrey"
                 android:textSize="16sp" />
@@ -325,7 +289,6 @@
                     android:textColor="@color/LightGrey"
                     android:textSize="16sp" />
             </soup.neumorphism.NeumorphCardView>
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -350,13 +313,12 @@
                     android:id="@+id/autoComplete"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/LightGrey"
                     android:inputType="none"
+                    android:textColor="@color/LightGrey"
                     android:textColorHint="#546E7A"
                     android:textSize="16sp"
                     tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -391,7 +353,6 @@
                     android:textColorHint="#546E7A"
                     android:textSize="16sp" />
             </soup.neumorphism.NeumorphCardView>
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -461,7 +422,6 @@
                     android:textColorHint="#546E7A"
                     android:textSize="16sp" />
             </soup.neumorphism.NeumorphCardView>
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -470,7 +430,6 @@
                 android:text="@string/end_date"
                 android:textColor="@color/LightGrey"
                 android:textSize="16sp" />
-
             <soup.neumorphism.NeumorphCardView
                 style="@style/Widget.Neumorph.CardView"
                 android:layout_width="match_parent"
